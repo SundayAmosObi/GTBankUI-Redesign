@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GTBankUI.LoginPage">
+
+    <StackLayout Orientation="Vertical">
+        <StackLayout Spacing="20" Padding="0" Margin="0,30,0,0"
+                 VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                 HeightRequest="150">
+
+            <Image VerticalOptions="Center" HorizontalOptions="Center"
+               HeightRequest="100" WidthRequest="100"
+               Source="gtbank_jpeg.jpg"/>
+
+            <Label Text="Mobile Banking" 
+               FontSize="20" FontAttributes="Bold"
+               VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <StackLayout Spacing="15" Padding="0" Margin="0,100,0,0"
+                         VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                         HeightRequest="170">
+                <Button Text="LOG IN" TextColor="White" FontSize="16"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="300"
+                        BackgroundColor="#DD4F05" CornerRadius="20"/>
+                <Button Text="QUICK TOP UP" TextColor="#DD4F05" FontSize="16"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="300" BackgroundColor="White"
+                        BorderColor="#DD4F05" CornerRadius="20" BorderWidth="2"/>
+                <Button Text="REGISTER" TextColor="#DD4F05" FontSize="16"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="300" BackgroundColor="White"
+                        BorderColor="#DD4F05" CornerRadius="20" BorderWidth="2"/>
+                
+            </StackLayout>
+
+            <StackLayout Spacing="15" Padding="0" Margin="0,10,0,0"
+                         VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                         HeightRequest="45">
+                <Label Text="OR" FontAttributes="Bold" FontSize="16"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Switch to M-Wallet" TextColor="#DD4F05" FontAttributes="Bold"
+                       VerticalOptions="Center" HorizontalOptions="Center"
+                       FontSize="16"/>
+
+            </StackLayout>
+
+            <StackLayout Spacing="0" Padding="0"
+                         VerticalOptions="End" HorizontalOptions="FillAndExpand"
+                         HeightRequest="40">
+                <ImageButton Source="help.png"
+                        CornerRadius="20"
+                        VerticalOptions="End" HorizontalOptions="End"
+                        HeightRequest="35" WidthRequest="35"
+                        Margin="0,0,35,0"/>
+
+            </StackLayout>
+
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>

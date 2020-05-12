@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:GTBankUI.Views"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             mc:Ignorable="d"
+             x:Class="GTBankUI.Views.FlyoutPage">
+
+    <!-- 
+        Styles and Resources 
+    -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!-- Template for FlyoutHeader -->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="White"
+                  HeightRequest="150">
+                <ffimageloading:CachedImage
+                        WidthRequest="50" 
+                        HeightRequest="50"
+			            Source = "profile_pic.png"
+                        CacheType="All" Margin="0,35,0,0">
+                    <ffimageloading:CachedImage.Transformations>
+                        <fftransformations:CircleTransformation />
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>
+                <Label Text="Fawale Gbolahan T" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <StackLayout Orientation="Horizontal" Spacing="15" Padding="60,0,0,0"
+                             VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                             HeightRequest="15">
+                    <Label Text="Last Login:" FontSize="10"/>
+                    <Label Text="Feb 21, 2019" FontSize="10" FontAttributes="Bold"/>
+                    <Label Text="1:48PM" FontSize="10" FontAttributes="Bold"/>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                             Margin="0,6,0,0">
+                    <BoxView HeightRequest="2" WidthRequest="250"
+                             Color="#DD4F05" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <!-- Inserting Flyout item which when clicked navigates to exact page -->
+    <FlyoutItem Title="Accounts" FlyoutIcon="accounts.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Transfers $ Withdrawals" FlyoutIcon="transfers.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="QR Payments" FlyoutIcon="qr_payments.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Airtime $ Data" FlyoutIcon="airtime.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Sports $ Gaming" FlyoutIcon="sports.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="School Payments" FlyoutIcon="payments.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Other Payments" FlyoutIcon="payments.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Cards $ Cheques" FlyoutIcon="cards.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Lifestyle" FlyoutIcon="lifestyle.png">
+        <ShellContent 
+                ContentTemplate="{DataTemplate local:FlyoutContentsPage}" />
+    </FlyoutItem>
+
+    <!--Inserting Menu items that performs an action when clicked-->
+    <MenuItem Text="Settings $ Help" 
+              IconImageSource="settings.png"/>
+    <MenuItem Text="Log Out" 
+              IconImageSource="logout.png"/>
+
+
+</Shell>

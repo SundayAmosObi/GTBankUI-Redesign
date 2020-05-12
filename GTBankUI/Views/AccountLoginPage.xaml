@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="GTBankUI.Views.AccountLoginPage">
+
+
+    <StackLayout Orientation="Vertical" BackgroundColor="White">
+        <StackLayout BackgroundColor="#100F0F" Orientation="Vertical"
+                     Opacity="0.7">
+            <Image VerticalOptions="End" HorizontalOptions="End"
+                   Margin="0,20,40,0"
+               HeightRequest="100" WidthRequest="100"
+               Source="gtbank_jpeg.jpg"/>
+
+            <Frame BorderColor="White" CornerRadius="25" HasShadow="True"
+                   BackgroundColor="#FFFFFF"
+                   HorizontalOptions="FillAndExpand" HeightRequest="450"
+                   Margin="0,50,0,0">
+            <StackLayout>
+
+                <Label Text="LOG IN TO YOUR ACCOUNT" TextColor="Black"
+                       FontSize="16" VerticalOptions="Center" HorizontalOptions="Center"
+                       FontAttributes="Bold"/>
+                <Label Text="Account Number" FontAttributes="Bold"
+                       Margin="25,40,0,0" TextColor="Black"/>
+                <Entry Placeholder="Enter your account number"
+                       VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                       BackgroundColor="#F2F2F2" HeightRequest="50"
+                       Margin="25,0,25,0"/>
+                <Label Text="Password" FontAttributes="Bold"
+                       Margin="25,30,0,0" TextColor="Black"/>
+                <Entry Placeholder="Enter your password" IsPassword="True"
+                       VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                       BackgroundColor="#F2F2F2" HeightRequest="50"
+                       Margin="25,0,15,0"/>
+                <Button Text="LOG IN" TextColor="White" FontSize="16"
+                        FontAttributes="Bold" Margin="0,30,0,0"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="300"
+                        BackgroundColor="#DD4F05" CornerRadius="20"/>
+            </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
